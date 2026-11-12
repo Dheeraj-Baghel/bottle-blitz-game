@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08141c">
+  <meta name="description" content="Choose a Bottle Blitz level and unlock the full orbit.">
+  <title>Level Map — Bottle Blitz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#08141c;--cream:#fff4db;--muted:#a9bfba;--orange:#ff9e37;--teal:#14d6c2;--line:#2a4850}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 2%,#173b42 0,#08141c 48%);color:var(--cream);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}img{display:block}h1,h2,p{margin:0}h1,h2{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase}
+    .shell{width:min(1210px,calc(100% - 38px));margin:auto}header{height:78px;border-bottom:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:space-between}.brand{font:900 26px "Barlow Condensed"}.brand b{color:var(--orange)}.back{border:1px solid #55706f;padding:11px 16px;border-radius:6px;color:#d4dfd9;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.back:hover{border-color:var(--orange);color:var(--orange)}
+    .intro{display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;padding:72px 0 36px}.eyebrow{color:var(--teal);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.2em;margin-bottom:17px}.eyebrow:before{content:"";display:inline-block;width:24px;height:2px;background:var(--teal);vertical-align:middle;margin-right:10px}.intro h1{font-size:clamp(68px,9vw,122px);line-height:.82;letter-spacing:-.03em}.intro h1 em{font-style:normal;color:var(--orange)}.intro p:last-child{max-width:520px;color:#bdd0ca;line-height:1.6;margin-top:22px}.progress-box{background:#122a33;border:1px solid #35545a;border-radius:12px;min-width:270px;padding:19px}.progress-box small{display:block;color:#9dbcb5;text-transform:uppercase;letter-spacing:.15em;font-size:10px;font-weight:800}.progress-box strong{display:block;font:900 42px "Barlow Condensed";margin:4px 0 13px}.progress-track{height:7px;background:#294047;border-radius:99px;overflow:hidden}.progress-track span{display:block;height:100%;width:16.67%;background:linear-gradient(90deg,var(--orange),var(--teal));border-radius:99px}.continue{display:inline-flex;justify-content:center;align-items:center;background:var(--orange);color:#11252b;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;padding:14px;border-radius:6px;width:100%;margin-top:17px}.continue:hover{background:#ffb756}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-bottom:75px}.card{position:relative;overflow:hidden;display:block;min-height:350px;background:linear-gradient(145deg,#18323a,#0e202a);border:1px solid #33545a;border-radius:13px;padding:20px 22px;transition:transform .2s,border-color .2s,box-shadow .2s}.card.playable:hover{transform:translateY(-5px);border-color:var(--orange);box-shadow:0 18px 45px #0005}.card.locked{opacity:.55;filter:saturate(.65)}.card-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}.number{font:900 34px "Barlow Condensed";color:var(--orange)}.card.locked .number{color:#87a5a1}.state{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.14em;color:var(--teal);border:1px solid rgba(20,214,194,.5);border-radius:5px;padding:7px 9px}.card.locked .state{color:#adc0ba;border-color:#56716c}.card-art{position:relative;height:160px;margin:0 0 8px;background:radial-gradient(circle at center,#22444a 0 28%,transparent 29%);border-radius:50%}.card-art:before,.card-art:after{content:"";position:absolute;border:1px solid #416a69;border-radius:50%;width:175px;height:175px;left:50%;top:50%;transform:translate(-50%,-50%)}.card-art:after{width:116px;height:116px;border-color:#2d5355}.card-art .gun{position:absolute;z-index:1;height:85px;left:50%;top:50%;transform:translate(-50%,-62%) rotate(18deg)}.card-art .bottle{position:absolute;z-index:2;height:74px;top:49%;left:50%;transform:translate(-50%,-50%)}.card-art .b1{left:28%;top:36%}.card-art .b2{left:74%;top:35%}.card-art .b3{left:51%;top:83%}.card.twin .b1{left:38%;top:27%}.card.twin .b2{left:63%;top:27%}.card h2{font-size:33px;line-height:.95;margin-bottom:8px;position:relative;z-index:2}.card p{color:#bad0c9;font-size:12px;line-height:1.45;min-height:35px;position:relative;z-index:2}.stats{display:flex;gap:17px;flex-wrap:wrap;border-top:1px solid #345158;padding-top:13px;margin-top:16px;color:#d9e7df;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.stats b{color:var(--orange)}.card.locked:after{content:"🔒";position:absolute;font-size:20px;right:20px;bottom:18px;filter:grayscale(1)}
+    footer{border-top:1px solid var(--line);padding:24px 0 34px;color:#8aa6a0;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer-inner strong{color:var(--cream);font:900 20px "Barlow Condensed"}
+    @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:670px){header{height:65px}.brand{font-size:21px}.back{font-size:10px;padding:9px 10px}.intro{grid-template-columns:1fr;padding-top:55px}.intro h1{font-size:78px}.progress-box{min-width:0}.grid{grid-template-columns:1fr}.card{min-height:330px}.footer-inner{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){.card{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header><a href="index.html" class="brand">BOTTLE <b>BLITZ</b> ✦</a><a href="index.html" class="back">← Back to home</a></header>
+    <main>
+      <section class="intro"><div><p class="eyebrow">Your route through the orbit</p><h1>THE <em>LEVEL</em><br>MAP.</h1><p>Clear each circle to unlock the next. Every level changes the targets, the movement, or the number of shots you can take.</p></div><div class="progress-box"><small>Your progress</small><strong id="progress-label">1 / 6 unlocked</strong><div class="progress-track"><span id="progress-fill"></span></div><a class="continue" id="continue" href="game.html?level=1">Play Level 01 ↗</a></div></section>
+      <section class="grid" id="level-grid" aria-label="Six game levels"></section>
+    </main>
+  </div>
+  <footer><div class="shell footer-inner"><strong>BOTTLE BLITZ ✦</strong><span>Progress is saved in this browser.</span></div></footer>
+  <script src="levels.js" defer></script>
+  <script src="map.js" defer></script>
+</body>
+</html>
